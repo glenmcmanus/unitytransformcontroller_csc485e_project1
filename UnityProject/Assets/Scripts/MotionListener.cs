@@ -125,12 +125,15 @@ public class MotionListener : MonoBehaviour
             {
                 if(result <= ultrasonic_deadzone.x)
                 {
-                    t.y = -translation_scale.y * Mathf.InverseLerp(ultrasonic_extents.x, ultrasonic_deadzone.x, result);
+                    t.y = -translation_scale.y * Mathf.InverseLerp(ultrasonic_deadzone.x, ultrasonic_extents.x, result);
 
                 }
                 else if(result >= ultrasonic_deadzone.y)
                 {
-                    t.y = translation_scale.y * Mathf.InverseLerp(ultrasonic_extents.y, ultrasonic_deadzone.y, result);
+                    if (result > ultrasonic_extents.y)
+                        result = ultrasonic_extents.y;
+
+                    t.y = translation_scale.y * Mathf.InverseLerp(ultrasonic_deadzone.y, ultrasonic_extents.y, result);
                 }
             }
         }
