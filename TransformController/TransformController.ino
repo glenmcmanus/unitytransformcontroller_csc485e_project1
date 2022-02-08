@@ -1,3 +1,12 @@
+//Thanks to Jeff Rowberg for i2cdevlib and starter code, 
+//https://github.com/jrowberg/i2cdevlib
+
+//Thanks to tutorialspoint for the ultrasonic sensor tutorial
+//https://www.tutorialspoint.com/arduino/arduino_ultrasonic_sensor.htm
+
+//Thanks to MisterBotBreak for the joystick tutorial.
+//https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-joystick-with-serial-monitor-1f04f0
+
 #include "I2Cdev.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
